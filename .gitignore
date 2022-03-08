@@ -1,6 +1,5 @@
 .idea
 vendor
-phpunit.xml.dist
 .phpunit.result.cache
 composer.lock
 .DS_Store
