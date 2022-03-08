@@ -29,8 +29,7 @@ the length can be altered from config file if you wish.
 | Laravel | Package |
 | ------- | ------------ |
 | `v8.*` | `v1.*` |
-
-[comment]: <> (| `v9.*` | `v2.*` |)
+| `v9.*` | `v2.*` |
 
 
 
@@ -40,7 +39,7 @@ the length can be altered from config file if you wish.
 You can install the package via composer:
 
 ```bash
-composer require rawaby88/muid:^1.0
+composer require rawaby88/muid
 ```
 
 ## Usage
