@@ -4,9 +4,6 @@ namespace Rawaby88\Muid;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Rawaby88\Muid\Skeleton\SkeletonClass
- */
 class MuidFacade extends Facade
 {
 	/**

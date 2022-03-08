@@ -4,21 +4,9 @@ namespace Rawaby88\Muid;
 
 class MuidService
 {
-	
-	/**
-	 * @var int
-	 */
-	protected $length;
-	
-	/**
-	 * @var ?string
-	 */
-	protected $prefix;
-	
-	/**
-	 * @var array
-	 */
-	protected $sets;
+	protected int $length;
+	protected ?string $prefix;
+	protected array $sets;
 	
 	public
 	function __construct ( $length, $prefix = NULL )
