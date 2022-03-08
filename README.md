@@ -1,12 +1,10 @@
 # Laravel Model unique identifier (MUID)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/rawaby88/muid.svg?style=flat-square)](https://packagist.org/packages/rawaby88/muid)
-
 [comment]: <> ([![Total Downloads]&#40;https://img.shields.io/packagist/dt/rawaby88/muid.svg?style=flat-square&#41;]&#40;https://packagist.org/packages/rawaby88/muid&#41;)
-![GitHub Actions](https://github.com/rawaby88/muid/actions/workflows/main.yml/badge.svg)
-
 [comment]: <> (<img alt="PHP from Packagist" src="https://img.shields.io/packagist/php-v/rawaby88/muid.svg">)
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/rawaby88/muid.svg?style=flat-square)](https://packagist.org/packages/rawaby88/muid)
+![GitHub Actions](https://github.com/rawaby88/muid/actions/workflows/main.yml/badge.svg)
 [![GitHub license](https://img.shields.io/github/license/rawaby88/muid)](LICENSE.md)
 
 Laravel package to generate a random id with your own prefix for your Eloquent models
