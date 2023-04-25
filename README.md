@@ -139,26 +139,26 @@ This package includes all types to generate your MUID in easy way
 
 lists of available Blueprints:
 
-| Blueprint | Size | Description |
-| ------- | ------- | ------------ |
-| **standard** |||
-| **`primaryMuid`** | `36` | Create a new muid column as the primary key(s) for the table |
-| **`muid`** | `36` | Create a new muid column on the table |
-| **`foreignMuid`** | `36` | Create a new muid column on the table with a foreign key constraint |
-| `muidMorph` | `36` | Add the proper columns for a polymorphic table using MUIDs |
-| `nullableMuidMorphs` | `36` | Add nullable columns for a polymorphic table using MUIDs |
-| **small** |||
-| `primarySmallMuid` | `24` | Create a new muid column as the primary key(s) for the table |
-| `smallMuid` | `24` | Create a new muid column on the table |
-| `foreignSmallMuid` | `24` | Create a new muid column on the table with a foreign key constraint |
-| `muidSmallMorph` | `24` | Add the proper columns for a polymorphic table using MUIDs |
+| Blueprint                 | Size | Description |
+|---------------------------| ------- | ------------ |
+| **standard**              |||
+| **`primaryMuid`**         | `36` | Create a new muid column as the primary key(s) for the table |
+| **`muid`**                | `36` | Create a new muid column on the table |
+| **`foreignMuid`**         | `36` | Create a new muid column on the table with a foreign key constraint |
+| `muidMorphs`              | `36` | Add the proper columns for a polymorphic table using MUIDs |
+| `nullableMuidMorphs`      | `36` | Add nullable columns for a polymorphic table using MUIDs |
+| **small**                 |||
+| `primarySmallMuid`        | `24` | Create a new muid column as the primary key(s) for the table |
+| `smallMuid`               | `24` | Create a new muid column on the table |
+| `foreignSmallMuid`        | `24` | Create a new muid column on the table with a foreign key constraint |
+| `muidSmallMorphs`         | `24` | Add the proper columns for a polymorphic table using MUIDs |
 | `nullableSmallMuidMorphs` | `24` | Add nullable columns for a polymorphic table using MUIDs |
-| **tiny** |||
-| `primaryTinyMuid` | `16` | Create a new muid column as the primary key(s) for the table |
-| `tinyMuid` | `16` | Create a new muid column on the table |
-| `foreignTinyMuid` | `16` | Create a new muid column on the table with a foreign key constraint |
-| `muidTinyMorph` | `16` | Add the proper columns for a polymorphic table using MUIDs |
-| `nullableTinyMuidMorphs` | `16` | Add nullable columns for a polymorphic table using MUIDs |
+| **tiny**                  |||
+| `primaryTinyMuid`         | `16` | Create a new muid column as the primary key(s) for the table |
+| `tinyMuid`                | `16` | Create a new muid column on the table |
+| `foreignTinyMuid`         | `16` | Create a new muid column on the table with a foreign key constraint |
+| `muidTinyMorphs`          | `16` | Add the proper columns for a polymorphic table using MUIDs |
+| `nullableTinyMuidMorphs`  | `16` | Add nullable columns for a polymorphic table using MUIDs |
 
 
 ### Migration example
@@ -189,7 +189,7 @@ Schema::create( 'model_with_foreignMuid_test', function ( Blueprint $table ): vo
 Schema::create( 'model_with_muidMorph_test', function ( Blueprint $table ): void
 {
     $table->muid( 'id' )->primary();
-    $table->muidMorph( 'testable' );
+    $table->muidMorphs( 'testable' );
     $table->timestamps();
 } );
 

@@ -51,7 +51,7 @@ class Blueprint extends BaseBlueprint
 	 * @return void
 	 */
 	public
-	function muidMorph ( $name, $indexName = NULL )
+	function muidMorphs ( $name, $indexName = NULL )
 	{
 		$this->string( "{$name}_type" );
 		

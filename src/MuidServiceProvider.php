@@ -88,7 +88,7 @@ class MuidServiceProvider extends ServiceProvider
 		 * @param string|null $indexName
 		 * @return void
 		 */
-		Blueprint::macro( 'muidTinyMorph', function ( $name, $indexName = NULL )
+		Blueprint::macro( 'muidTinyMorphs', function ( $name, $indexName = NULL )
 		{
 			$this->string( "{$name}_type" );
 			
@@ -176,7 +176,7 @@ class MuidServiceProvider extends ServiceProvider
 		 * @param string|null $indexName
 		 * @return void
 		 */
-		Blueprint::macro( 'muidSmallMorph', function ( $name, $indexName = NULL )
+		Blueprint::macro( 'muidSmallMorphs', function ( $name, $indexName = NULL )
 		{
 			$this->string( "{$name}_type" );
 			
@@ -264,7 +264,7 @@ class MuidServiceProvider extends ServiceProvider
 		 * @param string|null $indexName
 		 * @return void
 		 */
-		Blueprint::macro( 'muidMorph', function ( $name, $indexName = NULL )
+		Blueprint::macro( 'muidMorphs', function ( $name, $indexName = NULL )
 		{
 			$this->string( "{$name}_type" );
 			
