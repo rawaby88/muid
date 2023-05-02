@@ -38,26 +38,22 @@ class TestCase extends Orchestra
 		
 		Schema::create( 'model_with_muid_test', function ( Blueprint $table ): void
 		{
-			$table->muid( 'id' )
-			      ->primary();
+			$table->muid( 'id' )->primary();
 			$table->string( 'name' );
 			$table->timestamps();
 		} );
 		
 		Schema::create( 'model_with_foreignMuid_test', function ( Blueprint $table ): void
 		{
-			$table->muid( 'id' )
-			      ->primary();
-			$table->foreignMuid( 'model_with_muid_test_id' )
-			      ->constrained( 'model_with_muid_test' );
+			$table->muid( 'id' )->primary();
+			$table->foreignMuid( 'model_with_muid_test_id' )->constrained( 'model_with_muid_test' );
 			$table->timestamps();
 		} );
 		
 		Schema::create( 'model_with_muidMorph_test', function ( Blueprint $table ): void
 		{
-			$table->muid( 'id' )
-			      ->primary();
-			$table->muidMorph( 'testable' );
+			$table->muid( 'id' )->primary();
+			$table->muidMorphs( 'testable' );
 			$table->timestamps();
 		} );
 		
