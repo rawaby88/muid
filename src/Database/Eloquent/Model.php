@@ -60,7 +60,9 @@ class Model extends BaseModel
 		// Automatically generate a MUID if using them, and not provided.
 		static::creating( function ( self $model ): void
 		{
-			if ( $model->keyIsMuid )
+            DB::connection()->getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
+
+            if ( $model->keyIsMuid )
 			{
 				$con   = DB::connection();
 				$sm    = $con->getDoctrineSchemaManager();
