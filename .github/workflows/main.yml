@@ -73,13 +73,18 @@ jobs:
               if: matrix.dependency-stability == 'prefer-stable'
               run: composer update --prefer-stable
 
-            - name: run tests
-              run: vendor/bin/phpunit
-
-
             - name: Show dir
               run: pwd
             - name: PHP Version
               run: php --version
+
+            - name: Execute tests (Unit and Feature tests) via PHPUnit
+              env:
+               DB_CONNECTION: mysql
+               DB_DATABASE: db_test
+               DB_PORT: 33306
+               DB_USER: root
+               DB_PASSWORD: secrets
+              run: vendor/bin/phpunit --testdox
 
 # Code quality
