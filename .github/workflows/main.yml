@@ -19,8 +19,10 @@ jobs:
                 # Docker Hub image (also with version)
                 image: mysql:latest
                 env:
-                    MYSQL_ROOT_PASSWORD: secrets
+                    MYSQL_ROOT_PASSWORD: password
                     MYSQL_DATABASE:  forge
+                    MYSQL_USER: forge
+                    MYSQL_PASSWORD: password
                 ## map the "external" 33306 port with the "internal" 3306
                 ports:
                     - 33306:3306
@@ -95,6 +97,6 @@ jobs:
                   DB_DATABASE: forge
                   DB_PORT: 33306
                   DB_USER: forge
-                  DB_PASSWORD: secrets
+                  DB_PASSWORD: password
 
               run: vendor/bin/phpunit --testdox
