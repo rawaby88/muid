@@ -41,5 +41,31 @@ jobs:
               run: |
                   composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
                   composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+            - name: Set up MySQL 8 database
+              uses: docker-compose@v2
+              with:
+                      config: |
+                          version: '3.8'
+                          services:
+                              db:
+                                  image: mysql:8
+                                  ports:
+                                      - "3306:3306"
+                                  environment:
+                                      MYSQL_ROOT_PASSWORD: root
+                                      MYSQL_DATABASE: test_db
+                                      MYSQL_USER: test_user
+                                      MYSQL_PASSWORD: test_password
+            - name: Wait for MySQL 8 to start
+              run: sleep 30
+            - name: Execute tests
+              run: vendor/bin/phpunit
+              env:
+                DB_CONNECTION: mysql
+                DB_HOST: 127.0.0.1
+                DB_PORT: 3306
+                DB_DATABASE: test_db
+                DB_USERNAME: test_user
+                DB_PASSWORD: test_password
             - name: Execute tests
               run: vendor/bin/phpunit
