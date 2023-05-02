@@ -53,5 +53,5 @@ jobs:
                   DB_DATABASE: db_test
                   DB_PORT: 33306
                   DB_USER: root
-                  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+                  DB_PASSWORD: secrets
               run: vendor/bin/phpunit
