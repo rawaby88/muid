@@ -7,7 +7,7 @@
 ![GitHub Actions](https://github.com/rawaby88/muid/actions/workflows/main.yml/badge.svg)
 [![GitHub license](https://img.shields.io/github/license/rawaby88/muid)](LICENSE.md)
 
-Laravel package to generate a random id with your own prefix for your Eloquent models
+Laravel package to generate a random ID with your prefix for your Eloquent models
 
 ###Example
 
@@ -16,7 +16,7 @@ Laravel package to generate a random id with your own prefix for your Eloquent m
 </p>
 
 
-Available 3 length of Muid
+Available 3 lengths of Muid
 
 | MUID | Char count |
 | ------- | ------------ |
@@ -24,19 +24,20 @@ Available 3 length of Muid
 | `small` | `24 char` |
 | `standard` | `36 char` |
 
-the length can be altered from config file if you wish.
+the length can be altered from the config file if you wish.
 
 | Laravel | Package |
 | ------- | ------------ |
 | `v8.*` | `v1.*` |
 | `v9.*` | `v2.*` |
+| `v10.*` | `v3.*` |
 
 
 
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via Composer:
 
 ```bash
 composer require rawaby88/muid
@@ -126,16 +127,16 @@ protected $keyPrefix = 'example_';
 
 ### Creating models
 
-In addition of the `make:model` artisan command, you will now have access to
+In addition to the `make:model` artisan command, you will now have access to
 `muid:make:model` which has all the functionality of the standard `make:model`
-command (with exception of not being able to create a pivot model):
+command (with the exception of not being able to create a pivot model):
 
 ```bash
 php artisan muid:make:model Models/Organization --all
 ```
 
 ### Database migration
-This package includes all types to generate your MUID in easy way
+This package includes all types to generate your MUID in an easy way
 
 lists of available Blueprints:
 
@@ -249,7 +250,7 @@ php artisan vendor:publish --provider="Rawaby88\Muid\MuidServiceProvider"
 | Capital Char options
 |--------------------------------------------------------------------------
 |
-| set it to FALSE if you wish not use capital letters in the generated MUID
+| Set it to FALSE if you wish not to use capital letters in the generated MUID
 |
 */
 'allow_capital' => TRUE,
@@ -264,7 +265,7 @@ composer test
 
 ### Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
@@ -272,7 +273,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email github@dreamod.pl instead of using the issue tracker.
+If you discover any security-related issues, please email github@dreamod.pl instead of using the issue tracker.
 
 ## Credits
 
