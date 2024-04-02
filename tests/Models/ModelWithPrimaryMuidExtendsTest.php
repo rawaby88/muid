@@ -9,14 +9,14 @@ use Rawaby88\Muid\Database\Eloquent\Model;
  */
 class ModelWithPrimaryMuidExtendsTest extends Model
 {
-	/**
-	 * The table associated with the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'model_with_primaryMuid_test';
-	
-	protected $keyPrefix = 'primary_';
-	
-	protected $keyLength = 36;
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'model_with_primaryMuid_test';
+
+    protected $keyPrefix = 'primary_';
+
+    protected $keyLength = 36;
 }

@@ -8,13 +8,11 @@ use Rawaby88\Muid\Tests\TestCase;
 
 class ModelExtendingClassWithoutMuidTest extends TestCase
 {
-	/** @test */
-	public
-	function it_does_not_generate_muid_when_no_id_has_been_set ()
-	{
-		$this->expectException( PDOException::class );
-		
-		ModelWithMuidExtendsTest::create( [] );
-	}
-	
+    /** @test */
+    public function it_does_not_generate_muid_when_no_id_has_been_set()
+    {
+        $this->expectException(PDOException::class);
+
+        ModelWithMuidExtendsTest::create([]);
+    }
 }

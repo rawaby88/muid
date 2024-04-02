@@ -11,13 +11,10 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Rawaby88\Muid\Database\Eloquent\Model;
 
-class User extends Model implements
-	AuthenticatableContract,
-	AuthorizableContract,
-	CanResetPasswordContract
+class User extends Model implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
 {
-	use Authenticatable;
-	use Authorizable;
-	use CanResetPassword;
-	use MustVerifyEmail;
+    use Authenticatable;
+    use Authorizable;
+    use CanResetPassword;
+    use MustVerifyEmail;
 }

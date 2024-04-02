@@ -11,22 +11,21 @@ use Rawaby88\Muid\Database\Eloquent\Muid;
  */
 class ModelWithMuidMorphTraitTest extends Model
 {
-	use Muid;
-	
-	/**
-	 * The table associated with the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'model_with_muidMorph_test';
-	
-	protected $keyPrefix = 'morph_';
-	
-	protected $keyLength = 36;
-	
-	public
-	function testable (): MorphTo
-	{
-		return $this->morphTo();
-	}
+    use Muid;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'model_with_muidMorph_test';
+
+    protected $keyPrefix = 'morph_';
+
+    protected $keyLength = 36;
+
+    public function testable(): MorphTo
+    {
+        return $this->morphTo();
+    }
 }

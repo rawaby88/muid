@@ -10,16 +10,16 @@ use Rawaby88\Muid\Database\Eloquent\Muid;
  */
 class ModelWithPrimaryMuidTraitTest extends Model
 {
-	use Muid;
-	
-	/**
-	 * The table associated with the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'model_with_primaryMuid_test';
-	
-	protected $keyPrefix = 'primary_';
-	
-	protected $keyLength = 36;
+    use Muid;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'model_with_primaryMuid_test';
+
+    protected $keyPrefix = 'primary_';
+
+    protected $keyLength = 36;
 }
