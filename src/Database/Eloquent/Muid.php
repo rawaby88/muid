@@ -43,7 +43,6 @@ trait Muid
     {
         $this->incrementing = false;
         $this->keyType = 'string';
-        $this->keyLength = 16;
         $this->guarded = [];
     }
 }
