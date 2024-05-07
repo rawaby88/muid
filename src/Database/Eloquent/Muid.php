@@ -3,7 +3,6 @@
 namespace Rawaby88\Muid\Database\Eloquent;
 
 use Doctrine\DBAL\Exception;
-use Illuminate\Support\Facades\DB;
 use Rawaby88\Muid\Exceptions\KeyLengthException;
 use Rawaby88\Muid\MuidService;
 
@@ -14,7 +13,7 @@ trait Muid
      *
      * @var bool
      */
-    protected $keyIsMuid = true;
+    protected bool $keyIsMuid = true;
 
     /**
      * The "booting" method of the model.
@@ -26,16 +25,11 @@ trait Muid
     {
         // Automatically generate a MUID if using them, and not provided.
         static::creating(function (self $model): void {
-            DB::connection()->getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
 
             if ($model->keyIsMuid) {
-                $con = DB::connection();
-                $sm = $con->getDoctrineSchemaManager();
-                $table = $sm->listTableDetails($model->getTable());
-                $pk = $table->getPrimaryKey()->getColumns()[0];
-
+                $pk = $model->getKeyName();
                 if (empty($model->{$pk})) {
-                    $length = $con->getDoctrineColumn($model->getTable(), $pk)->getLength() ?? $model->keyLength;
+                    $length =  $model->keyLength;
                     if (! $length) {
                         throw new KeyLengthException();
                     }
@@ -49,6 +43,7 @@ trait Muid
     {
         $this->incrementing = false;
         $this->keyType = 'string';
+        $this->keyLength = 16;
         $this->guarded = [];
     }
 }
