@@ -21,7 +21,7 @@ trait Muid
      * @throws KeyLengthException
      * @throws Exception
      */
-    protected static function bootMuid(): void
+    protected static function booting(): void
     {
         // Automatically generate a MUID if using them, and not provided.
         static::creating(function (self $model): void {
