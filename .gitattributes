@@ -1,0 +1,17 @@
+* text=auto eol=lf
+
+# Export ignores (excluded from dist packages)
+/.github            export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/phpunit.xml        export-ignore
+/tests              export-ignore
+/CHANGELOG.md       export-ignore
+*.jpg               export-ignore
+*.png               export-ignore
+
+# Binary files
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
