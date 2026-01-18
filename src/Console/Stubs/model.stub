@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Rawaby88\Muid\Database\Eloquent\Model;
+
+class DummyClass extends Model
+{
+	//
+}

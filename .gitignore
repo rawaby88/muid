@@ -1,0 +1,9 @@
+.idea
+vendor
+.phpunit.result.cache
+composer.lock
+.DS_Store
+.AppleDouble
+.LSOverride
+build
+html

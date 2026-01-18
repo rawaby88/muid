@@ -1,0 +1,59 @@
+{
+    "name": "rawaby88/muid",
+    "description": "Generate a random id with your own prefix for your Eloquent models.",
+    "keywords": [
+        "php",
+        "laravel",
+        "eloquent",
+        "muid",
+        "dreamod",
+        "prefix id"
+    ],
+    "homepage": "https://github.com/rawaby88/muid",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mahmoud Osman",
+            "email": "github@dreamod.pl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0 || ^8.1 || ^8.2",
+        "doctrine/dbal": "^4"
+    },
+    "require-dev": {
+        "ext-pdo": "*",
+        "orchestra/testbench": " ^9.0",
+        "phpunit/phpunit": "^10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rawaby88\\Muid\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rawaby88\\Muid\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rawaby88\\Muid\\MuidServiceProvider"
+            ],
+            "aliases": {
+                "Muid": "Rawaby88\\Muid\\MuidFacade"
+            }
+        }
+    }
+}
