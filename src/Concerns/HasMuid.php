@@ -64,6 +64,16 @@ trait HasMuid
     }
 
     /**
+     * Get the primary key column name for MUID.
+     * Override this method in your model to customize the column name.
+     */
+    public function muidColumn(): string
+    {
+        // Default to the model's primaryKey property
+        return $this->primaryKey ?? 'id';
+    }
+
+    /**
      * Get the columns that should have MUIDs.
      * Override this method in your model to specify additional MUID columns.
      *
@@ -71,7 +81,15 @@ trait HasMuid
      */
     public function muidColumns(): array
     {
-        return [$this->getKeyName()];
+        return [$this->muidColumn()];
+    }
+
+    /**
+     * Get the primary key for the model.
+     */
+    public function getKeyName(): string
+    {
+        return $this->muidColumn();
     }
 
     /**
