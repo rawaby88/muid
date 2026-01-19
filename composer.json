@@ -1,6 +1,6 @@
 {
     "name": "rawaby88/muid",
-    "version": "5.0.0",
+    "version": "5.0.1",
     "description": "Laravel package for generating prefixed, validatable unique identifiers similar to Stripe's ID format",
     "keywords": ["laravel", "uuid", "identifier", "muid", "stripe-ids", "prefixed-ids"],
     "license": "MIT",
